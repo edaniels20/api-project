@@ -1,0 +1,28 @@
+{
+  "name": "student-api",
+  "version": "1.0.0",
+  "description": "Student api in node and sqlite",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Bryce Mullican",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.0",
+    "sqlite": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

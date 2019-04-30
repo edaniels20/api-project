@@ -10,7 +10,7 @@ class Products {
 }
 
 class User {
-    constructor(id, uName, email, fName, lName, pwd, location, securityLevel, gender) {
+    constructor(id, uName, email, fName, lName, pwd, location, securityLevel, gender_id) {
         this.id = id;
         this.uName = uName;
         this.email = email;

@@ -67,7 +67,7 @@ class luxDao {
     addProduct(Products) {
         let sqlRequest = "INSERT INTO cars (make, model, mpg, image, description) " +
         "VALUES ($make, $model, $mpg, $image, $description)";
-
+        console.log(Products.make)
         let sqlParams = {
             $make: Products.make,
             $model: Products.model,
@@ -142,7 +142,7 @@ class luxDao {
                         return err
                     } else {
                         // Creating prepared statment with the values from the request and hashed password
-                        let sqlRequest = "INSERT INTO user (uName, email, fName, lName, pwd, location, securityLevel, gender_id)" + 
+                        let sqlRequest = "INSERT INTO user (uName, email, fName, lName, pwd, location, security_id, gender_id)" + 
                         "VALUES ($uName, $email, $fName, $lName, $pwd, $location, $securityLevel, $gender)";
                         let sqlParams = {
                             $uName: req.body.uName,
@@ -152,7 +152,7 @@ class luxDao {
                             $pwd: hash,
                             $location: req.body.location,
                             $securityLevel: 1,
-                            $gender: req.body.gender_id
+                            $gender: Number(req.body.gender_id)
                         }
                         return this.common.run(sqlRequest, sqlParams);
                     }

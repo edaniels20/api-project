@@ -16,7 +16,6 @@ class Common {
         return new Promise(function (resolve, reject) {
             database.db.all(sqlRequest, function (err, rows) {
                 if (err) {
-                    console.log(err);
                     reject(
                         new DaoError(20, "Internal server error")
                     );
@@ -74,6 +73,7 @@ class Common {
         return new Promise(function (resolve, reject) {
             database.db.all(sqlRequest, function (err, rows) {
                 if (err) {
+                    console.log(err);
                     reject(
                         new DaoError(20, "Internal server error")
                     );
@@ -98,6 +98,7 @@ class Common {
                     reject(
                         new DaoError(11, "Invalid arguments")
                     )
+                    console.log(err);
                 }
             })
         });

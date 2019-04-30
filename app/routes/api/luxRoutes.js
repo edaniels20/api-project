@@ -26,10 +26,6 @@ router.post('/products/create', function (req, res) {
     luxController.create(req, res);
 })
 
-// router.get('/user/', function (req, res) {
-//     luxController.findAllUsers(res);
-// })
-
 // User register rout
 router.post('/user/register', function (req, res) {
     luxController.userRegister(req, res);
